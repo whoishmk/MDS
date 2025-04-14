@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Welcome to our Flask App</h1>
+{% if username %}
+    <p>Hello, {{ username }}! You are logged in.</p>
+{% else %}
+    <p>Please <a href="{{ url_for('login') }}">log in</a> or 
+       <a href="{{ url_for('register') }}">create an account</a>.</p>
+{% endif %}
+{% endblock %}
